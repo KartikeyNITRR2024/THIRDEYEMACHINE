@@ -138,7 +138,7 @@ def send_live_market_data():
         remaining_time = (TIME_TO_SEND_PAYLOAD - datetime.now(timezone.utc)).total_seconds()
         if remaining_time > 0:
             logging.info(f"Remaining Time: {remaining_time:.2f} seconds")
-            sleep_time = min(10, remaining_time)
+            sleep_time = min(60, remaining_time)
             time.sleep(sleep_time)
 
 
